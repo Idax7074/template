@@ -1,0 +1,53 @@
+---
+import ListElement from "./ListElement.astro";
+import Pic from "./Pic.astro";
+import Info from "./Info.astro";
+---
+
+<section>
+  <div class="first_product border">
+    <ul>
+      <Pic image="src/assets/images/test.jpg" />
+      <ListElement
+        header="Micro Backpack"
+        price="$90.00"
+        text="Are you a minimalist for a company carry option? The Micro Backpack is the perfect size for your essential everyday carry items. Wear it like a backpack or carry it like a satchel for all-day use."
+      />
+    </ul>
+    <Info icontext="Delivered" />
+  </div>
+  <div class="second_product border">
+    <ul>
+      <Pic image="src/assets/images/test-2.jpg" />
+      <ListElement
+        header="Nomad Shopping Tote"
+        price="$70.00"
+        text="This durable shopping tote is perfect for the world traveler. Its yellow canvas contruction is water, fray, tear resistant. The matching handle, backpack straps, and shoulder loops provide multiple carry options for a day out on your next adventure."
+      />
+    </ul>
+    <Info icontext="Pending" />
+  </div>
+
+  <style>
+    @import "https://unpkg.com/open-props";
+
+    ul {
+      list-style: none;
+      display: flex;
+      gap: var(--size-5);
+
+      margin: 0px;
+    }
+
+    section {
+      max-width: 1000px;
+
+      border: 15px solid var(--gray-1);
+    }
+
+    .border {
+      border: 0.5px solid gray;
+      padding: 20px;
+    }
+  </style>
+</section>

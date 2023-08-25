@@ -1,0 +1,35 @@
+---
+const { header, price, text } = Astro.props;
+import "../styles/reset.css";
+---
+
+<li>
+  <a href="#0">
+    <div>
+      <div class="headerPrice">
+        <p>{header}</p>
+        <h2 class="price">{price}</h2>
+      </div>
+
+      <small>{text}</small>
+    </div>
+  </a>
+</li>
+
+<style>
+  a {
+    text-decoration: none;
+
+    color: var(--gray-12);
+  }
+
+  p {
+    margin-bottom: var(--size-2);
+    font-weight: bold;
+  }
+
+  .headerPrice {
+    display: flex;
+    justify-content: space-between;
+  }
+</style>

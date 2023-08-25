@@ -1,0 +1,13 @@
+---
+const { image } = Astro.props;
+---
+
+<li>
+  <img src={image} alt="pic of car" />
+</li>
+
+<style>
+  img {
+    max-width: var(--size-12);
+  }
+</style>
